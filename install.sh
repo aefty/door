@@ -3,7 +3,7 @@ echo "Nicedoor Installtion ..."
 echo $1
 
 if [[ -z "$1" ]]; then
-	echo ">> install.sh <PATH-TO-RUN-SCRIPT-USING-DASHES-NOT-SLASHES@USERNAME.sh>"
+	echo ">> install.sh etc/init.d/<PATH-TO-RUN-SCRIPT-USING-DASHES-NOT-SLASHES@USERNAME.sh>"
 	echo '\n'
 else
 	sudo cp ./nicedoor.sh $1
