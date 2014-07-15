@@ -7,14 +7,14 @@
 
 DIR=/www
 FILE=$(basename $0 .sh)
-F=$(echo $FILE|sed 's/\-/\//g')
-USER=$(echo $F|cut -d '@' -f 2)
-TARGET=$(echo $F|cut -d '@' -f 1).sh
-REPO=$( echo $TARGET|cut -d '/' -f 1) 
-echo '\n'
+F=$(echo $FILE|sed "s/\-/\//g")
+USER=$(echo $F|cut -d "@" -f 2)
+TARGET=$(echo $F|cut -d "@" -f 1).sh
+REPO=$( echo $TARGET|cut -d "/" -f 1) 
+echo "\n"
 echo "Target Repository: <"https://github.com/$USER/$REPO.git">"
 echo "Target Boot File: <"$DIR/$TARGET">"
-echo '\n'
+echo "\n"
 do_start()
 {
   sudo rm -rf $DIR
