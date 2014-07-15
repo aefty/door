@@ -1,5 +1,10 @@
 #!/bin/sh
 
+### BEGIN INIT INFO
+# Provides:          aryan.eftekhari@gmail.com
+# Description:       dovecot pop & imap daemon
+### END INIT INFO
+
 DIR=/www
 FILE=$(basename $0 .sh)
 F=$(echo $FILE|sed 's/\-/\//g')
