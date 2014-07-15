@@ -5,12 +5,7 @@ if [ -z "$1" ]; then
   echo ">> install.sh etc/init.d/<PATH-TO-RUN-SCRIPT-USING-DASHES-NOT-SLASHES@USERNAME.sh>"
   echo "\n"
 else
-  if [ "$1"==$(basename $1) ]; then
-    P="/etc/init.d/"$1
-  else
-    P=$1
-  fi
-  
+  P="/etc/init.d/"$1
   echo "\n"
   echo "Installed In: "$P
   echo "\n"
