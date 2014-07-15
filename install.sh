@@ -14,4 +14,7 @@ else
   sudo chmod 755 $P
   NAME=$(basename $1)
   sudo update-rc.d $NAME defaults
+  echo "Installation Done..."
+  echo "Starting Script ..."
+  sudo sh $P
 fi
