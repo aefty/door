@@ -13,9 +13,8 @@ else
 		PATH = $1
 	fi
 
-	sudo cp ./nicedoor.sh $1
-	sudo chmod 755 $1
+	sudo cp ./nicedoor.sh $PATH
+	sudo chmod 755 $PATH
 	NAME=$(basename $1)
-
 	sudo update-rc.d $NAME defaults
 fi
