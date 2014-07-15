@@ -12,7 +12,7 @@ else
 	else
 		PATH = $1
 	fi
-
+	
 	sudo cp ./nicedoor.sh $PATH
 	sudo chmod 755 $PATH
 	NAME=$(basename $1)
