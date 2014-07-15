@@ -1,7 +1,6 @@
 #!/bin/bash
 
 echo "Nicedoor Installtion ..."
-echo $1
 
 if [ -z "$1" ]; then
   echo ">> install.sh etc/init.d/<PATH-TO-RUN-SCRIPT-USING-DASHES-NOT-SLASHES@USERNAME.sh>"
@@ -17,7 +16,7 @@ else
   echo "Installed In: "$P
   echo "\n"
 
-  cp nicedoor.sh $P
+  sudo cp nicedoor.sh $P
   sudo chmod 755 $P
   NAME=$(basename $1)
   sudo update-rc.d $NAME defaults

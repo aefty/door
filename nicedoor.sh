@@ -1,8 +1,13 @@
 #!/bin/bash
 
 ### BEGIN INIT INFO
-# Provides:          aryan.eftekhari@gmail.com
-# Description:       dovecot pop & imap daemon
+# Provides:          scriptname
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start backdoor script that will check github for updates on startup.
+# Description:       The executed startup script is located in File Name: <PROJECT-BOOT-STARTUP@USERNAME.sh> Location: <github.com/USERNAME/PROJECT/BOOT/STARTUP.sh> 
 ### END INIT INFO
 
 DIR=/www
@@ -20,7 +25,7 @@ do_start()
   sudo rm -rf $DIR
   sudo mkdir -p $DIR
   cd /$DIR
-  echo "Retriving Repo ..."
+  echo "Retrieving Repository ..."
   sudo git clone https://github.com/$USER/$REPO.git
   echo "Starting Boot Script..."
   sudo sh /$DIR/$TARGET
