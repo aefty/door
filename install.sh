@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "Nicedoor Installtion ..."
 
 if [ -z "$1" ]; then
@@ -16,7 +15,7 @@ else
   echo "Installed In: "$P
   echo "\n"
 
-  sudo cp nicedoor.sh $P
+  sudo cp nd.sh $P
   sudo chmod 755 $P
   NAME=$(basename $1)
   sudo update-rc.d $NAME defaults
