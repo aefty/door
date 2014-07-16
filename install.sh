@@ -1,20 +1,22 @@
 #!/bin/bash
-echo "Nicedoor Installtion ..."
+echo "Door Installtion ..."
 
 if [ -z "$1" ]; then
-  echo ">> install.sh etc/init.d/<PATH-TO-RUN-SCRIPT-USING-DASHES-NOT-SLASHES@USERNAME.sh>"
-  echo "\n"
+    echo ">> ./install.sh <path-to-startup-script@host.sh>"
+    echo "\n"
 else
-  P="/etc/init.d/"$1
-  echo "\n"
-  echo "Installed In: "$P
-  echo "\n"
 
-  sudo cp nd.sh $P
-  sudo chmod 755 $P
-  NAME=$(basename $1)
-  sudo update-rc.d $NAME defaults
-  echo "Installation Done..."
-  echo "Starting Script ..."
-  sudo sh $P
+    LOCATION=/etc/init.d
+    echo "\n"
+    echo "Attempting to install in path : "$LOCATION/$1
+    echo "\n"
+
+    sudo cp door.sh $LOCATION/$1
+    sudo chmod 755 $LOCATION/$1
+    NAME=$(basename $1)
+    sudo update-rc.d $NAME defaults
+    echo "Installation Done..."
+    echo "Starting Script ..."
+    sudo sh $LOCATION/$1
+
 fi
